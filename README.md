@@ -28,7 +28,7 @@ Essentially generates data on different countries about daily infections and rec
 
 ### Overview
 
-_**Project Title** CoVid19Daily
+_**Project Title** CoVid19Daily_
 
 <br>
 
