@@ -119,8 +119,8 @@ src
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Home       |   function    |   y   |   n   | _produce global Data for all countries affect by covid19._    |
-|   Countries   |   functional |   y   |   n | _Countries will use props to render a list of countries._       |
+|   Home       |   function    |   n   |   y   | _produce global Data for all countries affect by covid19._    |
+|   Countries   |   functional |   n   |   y | _Countries will use props to render a list of countries._       |
 | Countries/:id | functional |   y  |   y   | _will list individual data for each country that is called._     |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and list credit to API    ._ |
 
