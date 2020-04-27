@@ -135,15 +135,16 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Render API on console  |    H     |     3 hrs      |     0 hrs     |    3 hrs    |
-| create local json      |    M     |     3 hrs      |     0 hrs     |     TBD     |
-| create component Layout |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| create local json      |    L    |     3 hrs      |     0 hrs     |     TBD     |
+| create component Layout |    M     |     3 hrs      |     0 hrs     |     TBD     |
 | render Global Data on Page |    H     |     7 hrs      |     0 hrs     |     TBD     |
 | create links and Routes |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | make Helper functions  |    H     |     2 hrs      |     0 hrs     |     TBD     |
 | create countries list |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | create ContryDetail  |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | Design Webpage/CSS |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| USe StoryBooks  |    H     |     8 hrs      |     0 hrs     |     TBD     |
+| USe StoryBooks  |    M     |     8 hrs      |     0 hrs     |     TBD     |
+| Use npm tests   |    L     |    0 hrs       |    0 hrs      |   TBD     |
 | TOTAL               |          |    50 hrs      |     0 hrs     |     TBD     |
 
 <br>
