@@ -20,9 +20,9 @@ Essentially generates data on different countries about daily infections and rec
 
 ## Project Planning
 
-> Project will render daily Global infections and recoveries from CoVid19 for different countries.
-> It will have a home page that will generate Global Data
-> It will have a countries page that will generate a list of countries, which, when clicked, will show individual details on the infection rate.
+- _Project will render daily Global infections and recoveries from CoVid19 for different countries._
+- _It will have a home page that will generate Global Data_
+- _It will have a countries page that will generate a list of countries, which, when clicked, will show individual details on the infection rate._
 
 <br>
 
@@ -34,7 +34,7 @@ _**Project Title** CoVid19Daily_
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
+
 
 https://wireframe.cc/uO85UV
 https://wireframe.cc/QbamIv
@@ -50,9 +50,9 @@ https://covid19api.com/
 
 ### MVP
 
-> The Page will render Global Data for all Covid19 infections 
-> There will be a separate page that lists all the countries with clickable links
-> Upon Clicking, the the viewer will be taken to the country's individual data.
+- _The Page will render Global Data for all Covid19 infections._
+- _There will be a separate page that lists all the countries with clickable links._
+- _Upon Clicking, the the viewer will be taken to the country's individual data._
 
 _The **Project Title** Is a Reat Hooks based website built to render the latest news about the CoVid19 Crisis. It will give viewers a consized list of infections, deaths and recoveries both Globally and Individual Countries. The purpose of the project is for viewers to be aware of the pandemic's affect on the daily lives of citizens of each country._
 
@@ -60,10 +60,10 @@ _The **Project Title** Is a Reat Hooks based website built to render the latest 
 
 #### Goals
 
-- _Find Suitable API to work with_
+- _Find Suitable API to work with._
 - _Save a local JSON file to work with._
 - _Use API to render appropriate Data on Appropriate Pages._
-- _Use API to list all countries affected by COVID19 ._
+- _Use API to list all countries affected by COVID19._
 - _USe API to target each country and render individual Data for the page._
 - _Use Storybook to add multiple designed elements onto the page._
 
@@ -71,7 +71,7 @@ _The **Project Title** Is a Reat Hooks based website built to render the latest 
 
 #### Libraries
 
-> Use this section to list all supporting libraries and their role in the project.
+
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -83,7 +83,6 @@ _The **Project Title** Is a Reat Hooks based website built to render the latest 
 
 #### Data
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
@@ -93,7 +92,6 @@ _The **Project Title** Is a Reat Hooks based website built to render the latest 
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
 
 ```
 src
@@ -113,7 +111,7 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
@@ -128,9 +126,7 @@ src
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above. 
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -151,7 +147,6 @@ src
 
 #### Helper Functions
 
-> Use this section to document all helper functions– generic functions that can be reused in other applications.
 
 |  Function  | Description                                |
 | :--------: | :----------------------------------------- |
@@ -175,6 +170,7 @@ src
 ### Code Showcase
 
 > Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+(keeping these placeholder texts so that i can change them later)
 
 ### Code Issues & Resolutions
 
