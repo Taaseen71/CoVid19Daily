@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import data from './data.json';
+
 
 function Home(props) {
   useEffect(() => {
-    console.log(props.globalData.NewConfirmed);
+    console.log("Props Works but doesnt show first =", props.globalData.NewConfirmed);
   }, []);
 
   return (

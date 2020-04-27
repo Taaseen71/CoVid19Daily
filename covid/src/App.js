@@ -32,6 +32,7 @@ function App() {
 
         //* Set data Date
         let Date = myData.Date;
+        console.log(Date)
         console.log(fixDate(Date));
         setTodaysDate(fixDate(Date));
 
