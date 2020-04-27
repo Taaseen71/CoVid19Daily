@@ -143,8 +143,8 @@ src
 | create countries list |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | create ContryDetail  |    H     |     8 hrs      |     0 hrs     |     TBD     |
 | Design Webpage/CSS |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| USe StoryBooks  |    H     |     10 hrs      |     0 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     0 hrs     |     TBD     |
+| USe StoryBooks  |    H     |     8 hrs      |     0 hrs     |     TBD     |
+| TOTAL               |          |    50 hrs      |     0 hrs     |     TBD     |
 
 <br>
 
