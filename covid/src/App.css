@@ -1,38 +1,72 @@
+
+body{
+    background-color: thistle;
+}
+ 
+
 .App {
   text-align: center;
+  
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  min-height: 10px;
+  background: blueviolet;
+  color: white;
+
+}
+
+.unorderedList{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+}
+
+
+/*div Tags*/
+
+.countryListWrapper {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+
+
+
+
+/* LINK AND A TAGS */
+.navBar {
+  text-decoration:none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navBar :hover{
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countryNames {
+  text-decoration: none;
+  color: black;
+  padding: 0 15px;
 }
+
+.countryNames:hover{
+  color: red;
+  flex-grow: 2;
+}
+

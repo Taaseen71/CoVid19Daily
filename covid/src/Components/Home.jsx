@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-
+import data from './data.json';
 
 function Home(props) {
   useEffect(() => {
-    console.log("Props Works but doesnt show first =", props.globalData.NewConfirmed);
+    console.log(props.globalData.NewConfirmed);
   }, []);
 
   return (
     <div className='Home'>
-      <h1>{`Today's Date: ${props.todaysDate}`}</h1>
-      <h1>{`New Confirmed: ${props.globalData.NewConfirmed}`}</h1>
-      <h1>{`New Deaths: ${props.globalData.NewDeaths}`}</h1>
-      <h1>{`New Recovered: ${props.globalData.NewRecovered}`}</h1>
-      <h1>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h1>
-      <h1>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h1>
+      <h1>Global Data</h1>
+      <h2>{`Today's Date: ${props.todaysDate}`}</h2>
+      <h4>{`New Confirmed: ${props.globalData.NewConfirmed}`}</h4>
+      <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>
+      <h4>{`New Recovered: ${props.globalData.NewRecovered}`}</h4>
+      <h4>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h4>
+      <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
+      <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
     </div>
   );
 }
 
 export default Home;
 
-
-
-//! Old fixDate method. use only if the other one doesnt work
-
-// const fixDate = (date) => {
+//! Old fixDate method. use only if the other one doesnt work// const fixDate = (date) => {
 //   let Array= [];
 //   let returnStatement = []
 //   let firstSplit= date.match(/(.{1,10})/g);

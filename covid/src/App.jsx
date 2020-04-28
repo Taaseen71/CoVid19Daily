@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import axios from 'axios';
+import Nav from './Components/Nav';
+import Home from './Components/Home';
+import Countries from './Components/Countries';
 import { BrowserRouter as Saadat, Route, Switch } from 'react-router-dom';
 import data from './Components/data.json';
-import Home from './Components/Home';
+import CountryDetail from './Components/CountryDetail';
+import axios from 'axios';
 
 
+//!https://covid19api.com/
+//! https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#cc76052f-6601-4645-80e5-ca7aaa36f8ef
 
 
 
 function App() {
-
     useEffect(() => {
+        //! uncomment fetchDate() for live Status
         // fetchData();
         localData();
     }, []);
-
 
     const [global, setGlobal] = useState([]);
     const [todaysDate, setTodaysDate] = useState();
@@ -23,6 +27,9 @@ function App() {
 
     //* THIS FETCHES THE API FROM APITRACKER CURRENTLY INACTIVE, WHILE PROGRAMMING
     const fetchData = async () => {
+        // const data = await fetch('https://api.covid19api.com/summary');
+        // //* transfer to JSON
+        // const myData = await data.json();
         const data = await axios('https://api.covid19api.com/summary');
         const myData = data.data;
 
@@ -32,7 +39,6 @@ function App() {
 
         //* Set data Date
         let Date = myData.Date;
-        console.log(Date)
         console.log(fixDate(Date));
         setTodaysDate(fixDate(Date));
 
@@ -57,7 +63,6 @@ function App() {
         console.log(data[0].Countries);
     };
 
-
     //* THIS FUNCTION FIXES THE DATE THAT COMES COMPLETELY UNREADABLE
     const fixDate = (date) => {
         let full;
@@ -65,15 +70,39 @@ function App() {
         let month = date.slice(5, 7);
         let day = date.slice(8, 10);
         let time = date.slice(12, 19);
-        full = ` ${day}-${month}-${year}, Time:${time}`;
+        full = ` ${month}/${day}/${year}, Time Updated:${time}`;
         return full;
     };
 
-
     return (
-        <Saadat>
-            <div className="App">
-                <Home key={global} globalData={global} todaysDate={todaysDate} />
+        <Saadat classname="allWrapper">
+            <div className='App'>
+                <Nav />
+                <Switch>
+                    <Route path='/' exact>
+                        <Home
+                            key={global}
+                            globalData={global}
+                            todaysDate={todaysDate}
+                        />
+                    </Route>
+                    <Route exact path='/countries'>
+                        <Countries
+                            key={country}
+                            countryList={country}
+                            todaysDate={todaysDate}
+                        />
+                    </Route>
+                    <Route exact
+                        path='/countries/:id'
+                    >
+                        <CountryDetail
+                            key={country}
+                            countryDetail={country} />
+                    </Route>
+					//https://stackoverflow.com/questions/43456656/react-router-v4-routes-not-working
+					make it a component
+				</Switch>
             </div>
         </Saadat>
     );
