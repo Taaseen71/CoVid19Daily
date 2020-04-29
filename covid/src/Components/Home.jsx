@@ -9,8 +9,8 @@ function Home(props) {
 
     return (
         <div className='Home'>
-            <img src="https://cdn.theatlantic.com/thumbor/v-M1UZBy2rvQ8fF3J9stEVUYdeo=/720x405/media/img/mt/2020/03/AllClear/original.gif" alt="" width="300px" />
-            <h1>Global Data</h1>
+            <img src="https://media0.giphy.com/media/J0QVUUvPeLS5G/giphy.gif?cid=ecf05e47bd464062255a9f0c0c2e6b72b3eb9efbdbea3e66&rid=giphy.gif" alt="" width="300px" />
+            <h2>Global Data</h2>
             <h2>{`Today's Date: ${props.todaysDate}`}</h2>
             <h4>{`New Cases Confirmed Today: ${props.globalData.NewConfirmed}`}</h4>
             <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>

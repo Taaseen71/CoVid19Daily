@@ -25,10 +25,10 @@ function CountryDetail(props) {
 
     return (
         <div className="singleCountryDetail">
-            <h1>{fixDate(detail.Date)}</h1>
-            <h1>{id}</h1>
+            <h2>{fixDate(detail.Date)}</h2>
+            <h2>{id}</h2>
             <img src={`https://www.countryflags.io/${id}/flat/64.png`}></img>
-            <h1>{detail.Country}</h1>
+            <h2>{detail.Country}</h2>
             <h4>{`New Confirmed: ${detail.NewConfirmed}`}</h4>
             <h4>{`New Deaths: ${detail.NewDeaths}`}</h4>
             <h4>{`New Recovered: ${detail.NewRecovered}`}</h4>

@@ -60,6 +60,15 @@ form {
     font-weight: 800;
     
 }
+h1{
+    color: red;
+    font-size: 40px;
+    
+}
+
+h2 {
+    font-size: 25px;
+}
 
 h4 {
     padding: 10px;
