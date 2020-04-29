@@ -3,22 +3,23 @@ import '../App.css';
 import data from './data.json';
 
 function Home(props) {
-  useEffect(() => {
-    console.log(props.globalData.NewConfirmed);
-  }, []);
+    useEffect(() => {
+        console.log(props.globalData.NewConfirmed);
+    }, []);
 
-  return (
-    <div className='Home'>
-      <h1>Global Data</h1>
-      <h2>{`Today's Date: ${props.todaysDate}`}</h2>
-      <h4>{`New Confirmed: ${props.globalData.NewConfirmed}`}</h4>
-      <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>
-      <h4>{`New Recovered: ${props.globalData.NewRecovered}`}</h4>
-      <h4>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h4>
-      <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
-      <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
-    </div>
-  );
+    return (
+        <div className='Home'>
+            <img src="https://cdn.theatlantic.com/thumbor/v-M1UZBy2rvQ8fF3J9stEVUYdeo=/720x405/media/img/mt/2020/03/AllClear/original.gif" alt="" width="300px" />
+            <h1>Global Data</h1>
+            <h2>{`Today's Date: ${props.todaysDate}`}</h2>
+            <h4>{`New Cases Confirmed Today: ${props.globalData.NewConfirmed}`}</h4>
+            <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>
+            <h4>{`New Recovered: ${props.globalData.NewRecovered}`}</h4>
+            <h4>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h4>
+            <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
+            <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
+        </div>
+    );
 }
 
 export default Home;
