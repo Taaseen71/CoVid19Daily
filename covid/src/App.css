@@ -1,31 +1,33 @@
 
+
+
 body{
     background-color: thistle;
+   display: flex;
+   flex-flow: column nowrap;
+
 }
  
 
 .App {
   text-align: center;
-  
-
 }
 
 
 .Nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 10px;
   background: blueviolet;
   color: white;
-
+  font-size: 20px;
 }
 
 .unorderedList{
-  width: 50%;
+  width: 65%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   list-style: none;
 }
 
@@ -41,9 +43,22 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
+  /* justify-content: flex-start; */
+  max-height: 2000px;
   
+}
+
+
+form {
+    font-size: 14px;
+    font-weight: 800;
+    
+}
+
+h4 {
+    padding: 10px;
 }
 
 
@@ -51,18 +66,24 @@ li {
 
 /* LINK AND A TAGS */
 .navBar {
-  text-decoration:none;
-  color: white;
+    text-decoration:none;
+    color: white;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+
 }
 
 .navBar :hover{
-  color: red;
-}
+    color: #BADA55;
+    transition: all .2s ease-in-out;
+    transform: scale(1.2) 
+  }
 
 .countryNames {
   text-decoration: none;
   color: black;
   padding: 0 15px;
+  font-size: 20px
 }
 
 .countryNames:hover{
@@ -70,3 +91,55 @@ li {
   flex-grow: 2;
 }
 
+
+/* Styling the form */
+
+.formLabel {
+ 
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+}
+
+.formDiv {
+    background-color:   rgb(244, 206, 244);
+    display: inline-block;
+    border-radius: 2px;
+}
+
+input {
+    padding: 5px;
+    background:  rgb(244, 206, 244);
+    color: black;
+    font-weight: 800;
+    border: 2px solid rgb(91, 34, 91);
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+
+/* Styling Button */
+
+
+button {
+    background-color: blueviolet;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 5px;
+    padding:4px 25px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 5px rgb(62, 62, 62);
+    margin: 0 10px;
+    transform: translateY(-2px)
+}
+
+button:active {
+    box-shadow: 0 1px rgb(62, 62, 62);
+    transform: translateY(2px);
+    
+}

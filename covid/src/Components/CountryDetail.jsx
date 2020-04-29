@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import data from './data.json';
 import '../App.css';
-import { isCompositeComponent } from 'react-dom/test-utils';
 import { useParams } from "react-router-dom"
 
 function CountryDetail(props) {
@@ -25,17 +24,17 @@ function CountryDetail(props) {
     };
 
     return (
-        <div>
+        <div className="singleCountryDetail">
             <h1>{fixDate(detail.Date)}</h1>
             <h1>{id}</h1>
             <img src={`https://www.countryflags.io/${id}/flat/64.png`}></img>
             <h1>{detail.Country}</h1>
-            <h1>{`New Confirmed: ${detail.NewConfirmed}`}</h1>
-            <h1>{`New Deaths: ${detail.NewDeaths}`}</h1>
-            <h1>{`New Recovered: ${detail.NewRecovered}`}</h1>
-            <h1>{`Total Confirmed: ${detail.TotalConfirmed}`}</h1>
-            <h1>{`Total Recovered: ${detail.TotalRecovered}`}</h1>
-            <h1>{`Total Deaths: ${detail.TotalDeaths}`}</h1>
+            <h4>{`New Confirmed: ${detail.NewConfirmed}`}</h4>
+            <h4>{`New Deaths: ${detail.NewDeaths}`}</h4>
+            <h4>{`New Recovered: ${detail.NewRecovered}`}</h4>
+            <h4>{`Total Confirmed: ${detail.TotalConfirmed}`}</h4>
+            <h4>{`Total Recovered: ${detail.TotalRecovered}`}</h4>
+            <h4>{`Total Deaths: ${detail.TotalDeaths}`}</h4>
         </div>
     );
 }
