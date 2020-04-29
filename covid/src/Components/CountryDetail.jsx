@@ -11,7 +11,7 @@ function CountryDetail(props) {
     const detail = props.countryDetail.find(countryDetail => countryDetail.CountryCode === id)
     console.log(detail)
 
-    if (!detail) return (<h1>Loaded</h1>);	//*Guard Operator works with && 
+    if (!detail) return (<h1>Loading...</h1>);	//*Guard Operator works with && 
 
     const fixDate = (date) => {
         let full;
@@ -19,14 +19,14 @@ function CountryDetail(props) {
         let month = date.slice(5, 7);
         let day = date.slice(8, 10);
         let time = date.slice(12, 19);
-        full = ` ${month}/${day}/${year}, Time Updated:${time}`;
+        full = ` ${month}/${day}/${year}, Time Updated: ${time}`;
         return full;
     };
 
     return (
         <div className="singleCountryDetail">
             <h2>{fixDate(detail.Date)}</h2>
-            <h2>{id}</h2>
+            {/* <h2>{id}</h2> */} {/* Shows Params CountryCode */}
             <img src={`https://www.countryflags.io/${id}/flat/64.png`}></img>
             <h2>{detail.Country}</h2>
             <h4>{`New Confirmed: ${detail.NewConfirmed}`}</h4>

@@ -1,12 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
 
 
 body{
     background-color: rgb(0, 0, 0);
    display: flex;
    flex-flow: column nowrap;
-  
+   font-family: 'Righteous', cursive;  
    color: white;
+   font-family: 'Roboto', sans-serif;
 }
  
 
@@ -56,14 +58,19 @@ li {
 
 
 form {
-    font-size: 14px;
     font-weight: 800;
-    
+    transform: translateX(-10px)
 }
-h1{
+
+#countryName{
+    font-weight: 25px;
+    font-size: 20px;
+}
+
+#title{
     color: red;
     font-size: 40px;
-    
+    font-family: 'Righteous', cursive;  
 }
 
 h2 {
@@ -84,7 +91,7 @@ h4 {
     color: white;
     border: 2px transparent blueviolet;
     border-radius: 10px;
-    transform: translateX(25px)
+    transform: translateX(25%)
 }
 
 .navBar :hover{
@@ -172,3 +179,33 @@ button:active {
     background-color: rgb(125, 49, 51);
     color: white;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .countryListWrapper {
+  
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 10px;
+        /* justify-content: flex-start; */
+        max-height: 2000px;
+        background-image: url("https://c4.wallpaperflare.com/wallpaper/888/200/919/earth-black-background-world-map-the-continent-wallpaper-preview.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+      }
+      form {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          transform: translateX(3%);
+      }
+      input {
+          margin: 10px;
+      }
+
+  }

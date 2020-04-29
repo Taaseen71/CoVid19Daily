@@ -70,7 +70,7 @@ function App() {
         let month = date.slice(5, 7);
         let day = date.slice(8, 10);
         let time = date.slice(12, 19);
-        full = ` ${month}/${day}/${year}, Time Updated:${time}`;
+        full = ` ${month}/${day}/${year}, Time Updated: ${time}`;
         return full;
     };
 

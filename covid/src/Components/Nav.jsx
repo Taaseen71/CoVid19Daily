@@ -6,7 +6,7 @@ function Nav() {
     return (
         <div className='Nav'>
             <nav>
-                <h1>Corona Virus Tracker</h1>
+                <h1 id="title">Corona Virus Tracker</h1>
                 <ul className='unorderedList'>
                     <Link className='navBar' to='/'>
                         <li><button className="buttonHome">Global</button></li>
