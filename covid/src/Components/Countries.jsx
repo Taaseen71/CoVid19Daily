@@ -69,7 +69,7 @@ function Countries(props) {
                     <label> Search Country Name: </label>
                     <input type="text" value={input} requied onChange={e => handleInput(e.target.value)} />
                     {/* <input type="submit" value="search Country" /> */}
-                    <button type="submit" > Search </button>
+                    <button type="submit" className="buttonSearch"> Search </button>
                 </form>
 
             </div>

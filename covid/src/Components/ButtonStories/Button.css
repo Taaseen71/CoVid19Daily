@@ -1,7 +1,5 @@
 
 button {
-    background-color: blueviolet;
-    color: white;
     font-weight: 800;
     font-size: 14px;
     border-radius: 5px;
@@ -19,4 +17,19 @@ button:active {
     box-shadow: 0 1px rgb(62, 62, 62);
     transform: translateY(2px);
     
+}
+
+.buttonSearch {
+    background-color: blueviolet;
+    color: white;
+}
+
+.buttonHome {
+    background-color: yellow;
+    color: black;
+}
+
+.buttonCountry {
+    background-color: green;
+    color: white;
 }

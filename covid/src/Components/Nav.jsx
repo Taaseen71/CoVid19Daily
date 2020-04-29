@@ -9,10 +9,10 @@ function Nav() {
                 <h1>Corona Virus Tracker</h1>
                 <ul className='unorderedList'>
                     <Link className='navBar' to='/'>
-                        <li>Home</li>
+                        <li><button className="buttonHome">Home</button></li>
                     </Link>
                     <Link className='navBar' to='/countries'>
-                        <li>Countries</li>
+                        <li><button className="buttonCountry">Countries</button></li>
                     </Link>
                 </ul>
             </nav>
