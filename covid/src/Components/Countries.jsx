@@ -32,19 +32,19 @@ function Countries(props) {
         if (props.countryList.find(countryName => countryName.Country == input)) {
             const detail = props.countryList.find(countryName => countryName.Country == input)
             if (!detail) return (<h1>Loaded</h1>);
-            console.log("detail", detail.CountryCode)
+
             return detail.CountryCode
         }
         else if (props.countryList.find(countryName => countryName.CountryCode == input)) {
             const detail = props.countryList.find(countryName => countryName.CountryCode == input)
             if (!detail) return (<h1>Loaded</h1>);
-            console.log("detail", detail.CountryCode)
+
             return detail.CountryCode
         }
         else if (props.countryList.find(countryName => countryName.Slug == input)) {
             const detail = props.countryList.find(countryName => countryName.Slug == input)
             if (!detail) return (<h1>Loaded</h1>);
-            console.log("detail", detail.CountryCode)
+
             return detail.CountryCode
         }
     }

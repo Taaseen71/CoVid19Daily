@@ -6,10 +6,10 @@ import { Bar } from "react-chartjs-2";
 
 
 function CountryDetail(props) {
-    console.log(props)
 
+    //* setting ID by default to params. wont be called elsewhere
     const [id, setId] = useState(useParams());
-    console.log(id.id)
+
 
     const [newGraph, setNewGraph] = useState([]);
     const [totalGraph, setTotalGraph] = useState([])
@@ -23,21 +23,17 @@ function CountryDetail(props) {
 
     }, [props])
 
-    console.log(myDetail)
+
 
     useEffect(() => {
-        console.log(myDetail)
+        //* if myDetail.Country isTrue or has a value, then, create the Bar Graphs
         if (myDetail.Country) {
-            console.log('here')
             createBarGraph1(myDetail);
             createBarGraph2(myDetail);
         }
     }, [myDetail])
 
     //! PROTECT WORKING CODE STARTING HERE
-
-    console.log("id = ", id)
-
 
 
 
@@ -63,7 +59,7 @@ function CountryDetail(props) {
                         label: 'Bar Graph',
                         data: [
                             myDetail.NewConfirmed,
-                            myDetail.NewConfirmed,
+                            myDetail.NewRecovered,
                             myDetail.NewDeaths
                         ],
                         backgroundColor: [
@@ -77,7 +73,7 @@ function CountryDetail(props) {
                 ]
             }
         };
-        console.log(myChart)
+
         return setNewGraph(myChart)
     }
 
@@ -90,7 +86,7 @@ function CountryDetail(props) {
                         label: 'Bar Graph',
                         data: [
                             myDetail.TotalConfirmed,
-                            myDetail.TotalConfirmed,
+                            myDetail.TotalRecovered,
                             myDetail.TotalDeaths
                         ],
                         backgroundColor: [
@@ -110,14 +106,13 @@ function CountryDetail(props) {
 
 
 
-    //TODO: WHERE TO CALL FUNCTION createaBarGraph1(myDetail)??
-    console.log(myDetail.Date)
+
 
     return (
         <>
             <div className="singleCountryDetail">
                 {myDetail.Date && <h2>{fixDate(myDetail.Date)}</h2>}
-                {/* <h2>{id}</h2> */} {/* Shows Params CountryCode */}
+                {/* guard Operator in Action again */}
                 <img src={`https://www.countryflags.io/${id.id}/flat/64.png`}></img>
                 <h2>{myDetail.Country}</h2>
                 <h4>{`New Confirmed: ${myDetail.NewConfirmed}`}</h4>

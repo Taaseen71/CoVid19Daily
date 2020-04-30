@@ -5,7 +5,7 @@ import { Bar } from "react-chartjs-2";
 
 function Home(props) {
     useEffect(() => {
-        console.log(props.globalData.NewConfirmed);
+
         createBarGraph1(props);
         createBarGraph2(props);
     }, []);
@@ -25,7 +25,7 @@ function Home(props) {
                         label: 'Bar Graph',
                         data: [
                             props.globalData.NewConfirmed,
-                            props.globalData.NewConfirmed,
+                            props.globalData.NewRecovered,
                             props.globalData.NewDeaths
                         ],
                         backgroundColor: [
@@ -53,7 +53,7 @@ function Home(props) {
                         label: 'Bar Graph',
                         data: [
                             props.globalData.TotalConfirmed,
-                            props.globalData.TotalConfirmed,
+                            props.globalData.TotalRecovered,
                             props.globalData.TotalDeaths
                         ],
                         backgroundColor: [
