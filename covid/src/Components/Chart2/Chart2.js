@@ -2,8 +2,8 @@
 // https://stackoverflow.com/questions/44346562/chart-js-data-to-start-at-zero#comment75695940_44346562
 
 
-import React, { Component, useState, useEffect } from "react";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import React, { useState, useEffect } from "react";
+import { Bar } from "react-chartjs-2";
 
 
 
@@ -20,7 +20,7 @@ function Chart2() {
                 labels: ['Bar1', 'Bar2', 'Bar3'],
                 datasets: [
                     {
-                        label: 'Population',
+                        label: 'Bar Graph',
                         data: [
                             10000,
                             5000,
@@ -57,7 +57,20 @@ function Chart2() {
                             }
                         }]
                     },
-                    // maintainAspectRatio: false
+                    maintainAspectRatio: true
+                }}
+            />
+            <Bar
+                data={myState.chartData}
+                options={{
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    maintainAspectRatio: true
                 }}
             />
         </div>
