@@ -130,18 +130,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Render API on console  |    H     |     3 hrs      |     0 hrs     |    3 hrs    |
-| create local json      |    L    |     3 hrs      |     0 hrs     |     TBD     |
-| create component Layout |    M     |     3 hrs      |     0 hrs     |     TBD     |
-| render Global Data on Page |    H     |     7 hrs      |     0 hrs     |     TBD     |
-| create links and Routes |    H     |     5 hrs      |     0 hrs     |     TBD     |
-| make Helper functions  |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| create countries list |    H     |     8 hrs      |     0 hrs     |     TBD     |
-| create ContryDetail  |    H     |     8 hrs      |     0 hrs     |     TBD     |
-| Design Webpage/CSS |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| USe StoryBooks  |    M     |     8 hrs      |     0 hrs     |     TBD     |
-| Use npm tests   |    L     |    0 hrs       |    0 hrs      |   TBD     |
-| TOTAL               |          |    50 hrs      |     0 hrs     |     TBD     |
+| Render API on console  |    H     |     3 hrs      |     3 hrs     |    3 hrs    |
+| create local json      |    L    |     3 hrs      |     1 hrs     |     1 hrs     |
+| create component Layout |    M     |     3 hrs      |     5 hrs     |     5 hrs     |
+| render Global Data on Page |    H     |     7 hrs      |     5 hrs     |     5 hrs     |
+| create links and Routes |    H     |     5 hrs      |     5 hrs     |     5 hrs     |
+| make Helper functions  |    H     |     2 hrs      |     2 hrs     |     2 hrs    |
+| create countries list |    H     |     8 hrs      |     8 hrs     |     8 hrs  |
+| create ContryDetail  |    H     |     8 hrs      |     10 hrs     |     10 hrs   |
+| Design Webpage/CSS |    H     |     3 hrs      |     2 hrs     |     2 hrs     |
+| USe StoryBooks  |    M     |     8 hrs      |     10 hrs     |     10 hrs     |
+| Use npm tests   |    L     |    0 hrs       |    0 hrs      |   0 hrs     |
+| Bug fixes       |    L     |    5 hrs       |    8 hrs       |   8 hrs   |
+| TOTAL               |          |    50 hrs      |     58 hrs     |    58 hrs      |
 
 <br>
 
