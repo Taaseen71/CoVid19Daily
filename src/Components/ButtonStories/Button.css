@@ -1,0 +1,35 @@
+
+button {
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 5px;
+    padding:4px 25px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 5px rgb(62, 62, 62);
+    margin: 0 10px;
+    transform: translateY(-2px)
+}
+
+button:active {
+    box-shadow: 0 1px rgb(62, 62, 62);
+    transform: translateY(2px);
+    
+}
+
+.buttonSearch {
+    background-color: blueviolet;
+    color: white;
+}
+
+.buttonHome {
+    background-color: yellow;
+    color: black;
+}
+
+.buttonCountry {
+    background-color: green;
+    color: white;
+}

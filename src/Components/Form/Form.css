@@ -1,0 +1,24 @@
+
+.formLabel {
+ 
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+}
+
+.formDiv {
+    background-color:   rgb(244, 206, 244);
+    display: inline-block;
+    border-radius: 2px;
+}
+
+input {
+    padding: 5px;
+    background:  rgb(244, 206, 244);
+    color: black;
+    font-weight: 800;
+    border: 2px solid rgb(91, 34, 91);
+    font-size: 15px;
+    border-radius: 6px;
+}
