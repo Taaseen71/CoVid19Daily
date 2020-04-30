@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import '../App.css';
 
 function Countries(props) {
 
 
     const [input, handleInput] = useState("")
-
+    const [submitted, setSubmitted] = useState(false)
 
     //* this handles the input field to match with a country
 
@@ -21,19 +21,10 @@ function Countries(props) {
 
     const handleClick = (e) => {
         e.preventDefault();
-
-        console.log(input)
-
-        //* this will match the countryList for whatever we list on our input 
-
-
-        let newUrl = matchCountry(input)
-
-        //! I AM SO PROUD OF THIS LAST PART :D :D :D :D :D :D :D. 
-        //! I literally screamed when this worked on first try
-
-        return window.location.href = `/countries/${newUrl}`
-        //https://stackoverflow.com/questions/52887815/how-do-i-redirect-user-to-another-page-after-submit-the-form-in-react-js
+        if (!matchCountry(input)) {
+            return
+        }
+        setSubmitted(true);
     }
 
     //* This function will match the countries and then ONLY RETURN countryCode
@@ -69,7 +60,8 @@ function Countries(props) {
                     <label id="countryName"> Search Country Name: </label>
                     <input type="text" value={input} requied onChange={e => handleInput(e.target.value)} />
                     {/* <input type="submit" value="search Country" /> */}
-                    <button type="submit" className="buttonSearch"> Search </button>
+                    <button className="buttonSearch">Search</button>
+                    {submitted && <Redirect to={`/countries/${matchCountry(input)}`} />}
                 </form>
 
             </div>

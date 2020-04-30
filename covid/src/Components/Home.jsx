@@ -1,94 +1,124 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import data from './data.json';
+import { Bar } from "react-chartjs-2";
 
 function Home(props) {
     useEffect(() => {
         console.log(props.globalData.NewConfirmed);
+        createBarGraph1(props);
+        createBarGraph2(props);
     }, []);
 
+    //* Graphs Start here
+
+    const [newGraph1, setNewGraph1] = useState([])
+    const [totalGraph1, setTotalGraph1] = useState([])
+
+    //* This Creates Bar Graph of Newly Infected People Daily
+    const createBarGraph1 = (props) => {
+        const myChart = {
+            chartData: {
+                labels: ['New Cases', 'New Recovered', 'New Deaths'],
+                datasets: [
+                    {
+                        label: 'Bar Graph',
+                        data: [
+                            props.globalData.NewConfirmed,
+                            props.globalData.NewConfirmed,
+                            props.globalData.NewDeaths
+                        ],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)'
+
+                        ],
+
+                    }
+                ]
+            }
+        };
+
+        return setNewGraph1(myChart)
+    }
+
+    //* This Creates Bar Graph of Newly Infected People Daily
+    const createBarGraph2 = (props) => {
+        const myChart = {
+            chartData: {
+                labels: ['Total Cases', 'Total Recovered', 'Total Deaths'],
+                datasets: [
+                    {
+                        label: 'Bar Graph',
+                        data: [
+                            props.globalData.TotalConfirmed,
+                            props.globalData.TotalConfirmed,
+                            props.globalData.TotalDeaths
+                        ],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)',
+                            'rgba(255, 159, 64, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                        ],
+
+                    }
+                ]
+            }
+        };
+
+        return setTotalGraph1(myChart)
+    }
+
     return (
-        <div className='Home'>
-            <img src="https://media0.giphy.com/media/J0QVUUvPeLS5G/giphy.gif?cid=ecf05e47bd464062255a9f0c0c2e6b72b3eb9efbdbea3e66&rid=giphy.gif" alt="" width="300px" />
-            <h2>Global Data</h2>
-            <h2>{`Today's Date: ${props.todaysDate}`}</h2>
-            <h4>{`New Cases Confirmed Today: ${props.globalData.NewConfirmed}`}</h4>
-            <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>
-            <h4>{`New Recovered: ${props.globalData.NewRecovered}`}</h4>
-            <h4>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h4>
-            <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
-            <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
-        </div>
+        <>
+            <div className='Home'>
+                <img src="https://media0.giphy.com/media/J0QVUUvPeLS5G/giphy.gif?cid=ecf05e47bd464062255a9f0c0c2e6b72b3eb9efbdbea3e66&rid=giphy.gif" alt="" width="300px" />
+                <h2>Global Data</h2>
+                <h2>{`Today's Date: ${props.todaysDate}`}</h2>
+                <h4>{`New Cases Confirmed Today: ${props.globalData.NewConfirmed}`}</h4>
+                <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>
+                <h4>{`New Recovered: ${props.globalData.NewRecovered}`}</h4>
+                <h4>{`Total Confirmed Cases: ${props.globalData.TotalConfirmed}`}</h4>
+                <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
+                <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
+            </div>
+            <div className="chart1">
+                <Bar
+                    data={newGraph1.chartData}
+                    height="50px"
+                    options={{
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        maintainAspectRatio: true
+                    }}
+                />
+            </div>
+            <div className="chart2">
+                <Bar
+                    data={totalGraph1.chartData}
+                    height="50px"
+                    options={{
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        maintainAspectRatio: true
+                    }}
+                />
+            </div>
+        </>
     );
 }
 
 export default Home;
 
-//! Old fixDate method. use only if the other one doesnt work// const fixDate = (date) => {
-//   let Array= [];
-//   let returnStatement = []
-//   let firstSplit= date.match(/(.{1,10})/g);
-//   Array.push(firstSplit[0])
-//   Array.push(firstSplit[1]);
-//   let secondSplit = Array[1].match(/(.{1,9})/g)
-
-//   returnStatement.push(Array[0]);
-//   returnStatement.push(secondSplit[0]);
-
-//   let finalResult = returnStatement.join(', ')
-
-//   return finalResult;
-// }
-
-//! this method was was for testing. works fine
-
-//   useEffect (() => {
-//     // fetchData();
-//     localData();
-
-//   },[])
-
-//   const [global, setGlobal] = useState([]);
-//   const [todaysDate, setTodaysDate] = useState()
-
-//   const fetchData = async () => {
-//     const data= await fetch('https://api.covid19api.com/summary');
-
-//     const myData = await data.json();
-//     console.log(myData);
-//     setGlobal(myData.Global);
-//   }
-
-//   const localData = () => {
-//     setGlobal(data[0].Global);
-//     console.log(data[0].Date);
-//     let Date = data[0].Date;
-//     console.log(fixDate(Date));
-//     setTodaysDate(fixDate(Date));
-
-//   }
-
-//  const fixDate = (date) => {
-
-//    let full;
-//     let year= date.slice(0,4)
-
-//     let month = date.slice(5,7)
-//     let day= date.slice(8,10)
-//     let time = date.slice(12,19)
-//     full= ` ${day}-${month}-${year}, Time:${time}`
-
-//     return full;
-//   }
-
-//   return (
-//     <div className="Home">
-//       <h1>{`Today's Date: ${todaysDate}`}</h1>
-//     <h1>{`New Confirmed: ${global.NewConfirmed}`}</h1>
-//     <h1>{`New Deaths: ${global.NewDeaths}`}</h1>
-//     <h1>{`New Recovered: ${global.NewRecovered}`}</h1>
-//     <h1>{`Total Confirmed Cases: ${global.TotalConfirmed}`}</h1>
-//     <h1>{`Total Recovered Cases: ${global.TotalRecovered}`}</h1>
-//     </div>
-
-// );

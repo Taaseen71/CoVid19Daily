@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import Countries from './Components/Countries';
-import { BrowserRouter as Saadat, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import data from './Components/data.json';
 import CountryDetail from './Components/CountryDetail';
 import axios from 'axios';
@@ -17,8 +17,8 @@ import axios from 'axios';
 function App() {
     useEffect(() => {
         //! uncomment fetchDate() for live Status
-        // fetchData();
-        localData();
+        fetchData();
+        // localData();
     }, []);
 
     const [global, setGlobal] = useState([]);
@@ -75,36 +75,36 @@ function App() {
     };
 
     return (
-        <Saadat classname="allWrapper">
-            <div className='App'>
-                <Nav />
-                <Switch>
-                    <Route path='/' exact>
-                        <Home
-                            key={global}
-                            globalData={global}
-                            todaysDate={todaysDate}
-                        />
-                    </Route>
-                    <Route exact path='/countries'>
-                        <Countries
-                            key={country}
-                            countryList={country}
-                            todaysDate={todaysDate}
-                        />
-                    </Route>
-                    <Route exact
-                        path='/countries/:id'
-                    >
-                        <CountryDetail
-                            key={country}
-                            countryDetail={country} />
-                    </Route>
+
+        <div className='App'>
+            <Nav />
+            <Switch>
+                <Route path='/' exact>
+                    <Home
+                        key={global}
+                        globalData={global}
+                        todaysDate={todaysDate}
+                    />
+                </Route>
+                <Route exact path='/countries'>
+                    <Countries
+                        key={country}
+                        countryList={country}
+                        todaysDate={todaysDate}
+                    />
+                </Route>
+                <Route exact
+                    path='/countries/:id'
+                >
+                    <CountryDetail
+                        key={country}
+                        countryDetail={country} />
+                </Route>
 					//https://stackoverflow.com/questions/43456656/react-router-v4-routes-not-working
 					make it a component
 				</Switch>
-            </div>
-        </Saadat>
+        </div>
+
     );
 }
 
