@@ -1,3 +1,4 @@
+https://0hsaad-covid19.netlify.app/
 # CoVid19Daily Project 2
 Essentially generates data on different countries about daily infections and recoveries
 
