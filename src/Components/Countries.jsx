@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import '../App.css';
+import { isCompositeComponent } from 'react-dom/test-utils';
 
 function Countries(props) {
 
@@ -29,24 +30,53 @@ function Countries(props) {
 
     //* This function will match the countries and then ONLY RETURN countryCode
     const matchCountry = (input) => {
-        if (props.countryList.find(countryName => countryName.Country == input)) {
-            const detail = props.countryList.find(countryName => countryName.Country == input)
-            if (!detail) return (<h1>Loaded</h1>);
+        // if (props.countryList.find(countryName => countryName.Country === input)) {
+        //     const detail = props.countryList.find(countryName => countryName.Country === input)
+        //     if (!detail) return (<h1>Loaded</h1>);
+        //     console.log(detail);
+        //     return detail.CountryCode
+        // }
+        // else if (props.countryList.find(countryName => countryName.CountryCode === input)) {
+        //     const detail = props.countryList.find(countryName => countryName.CountryCode == input)
+        //     if (!detail) return (<h1>Loaded</h1>);
+        //     console.log(detail);
+        //     return detail.CountryCode
+        // }
+        // else if (props.countryList.find(countryName => countryName.Slug === input)) {
+        //     const detail = props.countryList.find(countryName => countryName.Slug == input)
+        //     if (!detail) return (<h1>Loaded</h1>);
+        //     console.log(detail);
+        //     return detail.CountryCode
+        // }
+     
+       
+       if (input.length === 2) {
+           if (props.countryList.find(countryName => countryName.CountryCode === input.toUpperCase())) {
+               console.log(input.toUpperCase())
+               const detail = props.countryList.find(countryName => countryName.CountryCode === input.toUpperCase())
+               if (!detail) return (<h1>Loaded</h1>);
+                   console.log(detail);
+                   return detail.CountryCode
+           }
+       }
 
-            return detail.CountryCode
+       else if (input.length > 2 ) {   
+                if (props.countryList.find(countryList => countryList.Country.toLowerCase().includes(input.toLowerCase()))){
+                       console.log(input)
+                       const detail = props.countryList.find(countryList => countryList.Country.toLowerCase().includes(input.toLowerCase()))
+                       if (!detail) return (<h1> Loaded </h1>);
+                       console.log(detail);
+                       return detail.CountryCode;
+                   }
+                   else {
+                    console.log("not found")
+                }
+        
+       }
+        else {
+            console.log("not found")
         }
-        else if (props.countryList.find(countryName => countryName.CountryCode == input)) {
-            const detail = props.countryList.find(countryName => countryName.CountryCode == input)
-            if (!detail) return (<h1>Loaded</h1>);
 
-            return detail.CountryCode
-        }
-        else if (props.countryList.find(countryName => countryName.Slug == input)) {
-            const detail = props.countryList.find(countryName => countryName.Slug == input)
-            if (!detail) return (<h1>Loaded</h1>);
-
-            return detail.CountryCode
-        }
     }
 
 
@@ -63,6 +93,11 @@ function Countries(props) {
                     <button className="buttonSearch">Search</button>
                     {submitted && <Redirect to={`/countries/${matchCountry(input)}`} />}
                 </form>
+                <br/>
+                <br/>
+            </div>
+
+            <div>
 
             </div>
 

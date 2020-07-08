@@ -74,8 +74,9 @@ function Home(props) {
     return (
         <>
             <div className='Home'>
-                <img src="https://media0.giphy.com/media/J0QVUUvPeLS5G/giphy.gif?cid=ecf05e47bd464062255a9f0c0c2e6b72b3eb9efbdbea3e66&rid=giphy.gif" alt="" width="300px" />
                 <h2>Global Data</h2>
+                {/* <img src="https://media0.giphy.com/media/J0QVUUvPeLS5G/giphy.gif?cid=ecf05e47bd464062255a9f0c0c2e6b72b3eb9efbdbea3e66&rid=giphy.gif" alt="" width="300px" /> */}
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="" width="100px" />
                 <h2>{`Today's Date: ${props.todaysDate}`}</h2>
                 <h4>{`New Cases Confirmed Today: ${props.globalData.NewConfirmed}`}</h4>
                 <h4>{`New Deaths: ${props.globalData.NewDeaths}`}</h4>

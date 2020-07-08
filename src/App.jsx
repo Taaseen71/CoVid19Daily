@@ -17,8 +17,8 @@ import axios from 'axios';
 function App() {
     useEffect(() => {
         //! uncomment fetchDate() for live Status
-        fetchData();
-        // localData();
+        // fetchData();
+        localData();
     }, []);
 
     const [global, setGlobal] = useState([]);
