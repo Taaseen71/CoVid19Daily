@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import '../App.css';
 import { isCompositeComponent } from 'react-dom/test-utils';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Dropdown } from 'react-bootstrap';
+
 
 function Countries(props) {
 
@@ -97,9 +100,34 @@ function Countries(props) {
                 <br/>
             </div>
 
-            <div>
 
-            </div>
+{/* //* DROPDOWN MENU UNDER PROGRESS */}
+        <div style={{display:"none"}}>
+            <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-item-button">
+                    Dropdown Button
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <div >
+                         {props.countryList.map((countryList) => (
+                           
+                        <Dropdown.Item >
+                            <Link
+                              className='countryNames'
+                              to={`/countries/${countryList.CountryCode}`}
+                               key={countryList.Country}
+                             >
+                                <h6>{countryList.Country}</h6>
+                             </Link>
+                         </Dropdown.Item>
+                         ))}
+                    </div>
+                  
+                </Dropdown.Menu>
+            </Dropdown>
+        </div>
+{/* //* END DROP DOWN MENU  */}
 
             <div className='countryListWrapper'>
                 {props.countryList.map((countryList) => (
