@@ -85,10 +85,16 @@ function Home(props) {
                 <h4>{`Total Recovered Cases: ${props.globalData.TotalRecovered}`}</h4>
                 <h4>{`Total Deaths: ${props.globalData.TotalDeaths}`}</h4>
             </div>
+
+            <div className="chartsWrapper">
+
+         
+            <div className= "charts">
+
             <div className="chart1">
-                <Bar
+                <Bar className="graph"
                     data={newGraph1.chartData}
-                    height="50px"
+                
                     options={{
                         scales: {
                             yAxes: [{
@@ -97,14 +103,15 @@ function Home(props) {
                                 }
                             }]
                         },
+                        responsive: true,
                         maintainAspectRatio: true
                     }}
                 />
             </div>
             <div className="chart2">
-                <Bar
+                <Bar className="graph"
                     data={totalGraph1.chartData}
-                    height="50px"
+               
                     options={{
                         scales: {
                             yAxes: [{
@@ -113,9 +120,13 @@ function Home(props) {
                                 }
                             }]
                         },
+                        responsive: true,
                         maintainAspectRatio: true
                     }}
                 />
+            </div>
+                            
+            </div>
             </div>
         </>
     );

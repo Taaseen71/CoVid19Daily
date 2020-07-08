@@ -4,7 +4,7 @@
 
 body{
     background-color: rgb(185, 172, 152);
-   animation: pulse 5s infinite;
+   animation: pulse 4s infinite;
    display: flex;
    flex-flow: column nowrap;
    font-family: 'Righteous', cursive;  
@@ -22,7 +22,7 @@ body{
           background-color:  rgb(187, 162, 132);
       }
       50% {
-          background-color: rgb(185, 172, 152);
+          background-color: rgb(187, 146, 134);
       }
       100% {
              background-color:  rgb(187, 162, 132);
@@ -230,7 +230,7 @@ button:active {
         padding: 10px;
         /* justify-content: flex-start; */
         max-height: 2000px;
-        background-image: url("https://c4.wallpaperflare.com/wallpaper/888/200/919/earth-black-background-world-map-the-continent-wallpaper-preview.jpg");
+        /* background-image: url("https://c4.wallpaperflare.com/wallpaper/888/200/919/earth-black-background-world-map-the-continent-wallpaper-preview.jpg"); */
         background-repeat: no-repeat;
         background-size: contain;
         background-position-x: center;
@@ -245,4 +245,50 @@ button:active {
           margin: 10px;
       }
 
+    .chart1 {
+        display: flex;
+        flex-direction: row;
+        width: 300px
+  }
+    .chart2 {
+      display: flex;
+      flex-direction: row;
+       width: 300px
+  }
+ .chartsWrapper {
+     display: flex;
+     justify-content: center;
+ }
+
+    .charts {
+         /* display: block; */
+         flex-direction: row;
+         /* justify-content: center; */
+    }
+
+  }
+
+
+  @media only screen and (min-width: 800px) {
+   
+      .chart1 {
+        display: flex;
+        flex-direction: row;
+         width: 800px
+    }
+      .chart2 {
+        display: flex;
+        flex-direction: row;
+         width: 800px
+    }
+    .chartsWrapper {
+        display: flex;
+        justify-content: center;
+    }
+   
+       .charts {
+            /* display: block; */
+            flex-direction: row;
+            /* justify-content: center; */
+       }
   }

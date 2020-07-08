@@ -122,10 +122,18 @@ function CountryDetail(props) {
                 <h4>{`Total Recovered: ${myDetail.TotalRecovered}`}</h4>
                 <h4>{`Total Deaths: ${myDetail.TotalDeaths}`}</h4>
             </div>
+
+
+
+
+<div className="chartsWrapper">
+    <div className= "charts">
+
+   
             <div className="chart1">
-                <Bar
+                <Bar className="graph"
                     data={newGraph.chartData}
-                    height="50px"
+                    // height="50px"
                     options={{
                         scales: {
                             yAxes: [{
@@ -139,9 +147,9 @@ function CountryDetail(props) {
                 />
             </div>
             <div className="chart2">
-                <Bar
+                <Bar className="graph"
                     data={totalGraph.chartData}
-                    height="50px"
+                    // height="50px"
                     options={{
                         scales: {
                             yAxes: [{
@@ -154,6 +162,12 @@ function CountryDetail(props) {
                     }}
                 />
             </div>
+
+
+            </div>
+</div>
+
+
         </>
     );
 }
